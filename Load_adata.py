@@ -44,8 +44,8 @@ adata.obs['layer']=adata.obs.label
 adata.obs.layer.replace({'L1R': 'L1', 'L1L': 'L1','L2R': 'L2', 'L2L': 'L2','L3R': 'L3', 'L3L': 'L3',
   'L4R': 'L4', 'L4L': 'L4','L5R': 'L5', 'L5L': 'L5','WMR': 'WM', 'WML': 'WM','L6aR': 'L6', 'L6bR': 'L6',
   'L6aL': 'L6', 'L6bL': 'L6','L6a':'L6','L6b':'L6','6a':'L6'}, inplace=True)
-print(adata_filt)
-print(adata_filt.obs)
-print(adata_filt.var)
-print(adata_filt.obs.layer.value_counts())
-adata_filt.write_h5ad(output_path + f'raw/{slab}_raw.h5ad')
+print(adata)
+print(adata.obs)
+print(adata.var)
+print(adata.obs.layer.value_counts())
+adata.write_h5ad(output_path + f'raw/{slab}_raw.h5ad')
