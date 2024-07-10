@@ -7,4 +7,4 @@ def norm_by_layer(adata):
     mean_value_df=pd.DataFrame(np.concatenate(mean_value),columns=adata[(adata.obs.sample_id == i) & (adata.obs.layer == k)].var_names) #all layer mean
     all_mean=mean_value_df.mean(axis=0).to_numpy() #all layer mean calculate sample mean
     adata[adata.obs.sample_id == i].X=csr_matrix(adata[adata.obs.sample_id == i].X-all_mean)
-  adata.write_h5ad(f'{lab}_spot_nor_sample_mean.h5ad')
+  return adata
