@@ -5,4 +5,5 @@
 1. Load_adata.py
 2. QC_adata.py
 3. PCA_adata.py
-4. concat_samples.py 
+4. concat_samples.py
+5. PCA_after_norm.py
